@@ -1,35 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Profile card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Victor Crest
-  26
-  London
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  80K
-  Followers
+    <title>Frontend Mentor | Profile card component</title>
 
-  803K
-  Likes
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .profile-card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 350px;
+        height: 350px;
+        box-shadow: 0px 3px 5px -1px rgb(99, 99, 99);
+        margin: 0 auto;
+        border-radius: 8px;
+        z-index: 1;
+        font-family: "Cabin", sans-serif;
+        background-color: white;
+      }
 
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      .profile-card-bg {
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        background-image: url("./images/bg-pattern-card.svg");
+        height: 140px;
+      }
+
+      .profile-card-img {
+        border-radius: 100px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: -55px;
+        border: 5px solid white;
+      }
+
+      .profile-card-content-name {
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.1em;
+      }
+
+      .profile-card-content-name span {
+        font-weight: 400;
+        color: grey;
+        font-size: 1em;
+      }
+
+      .profile-card-content-location {
+        text-align: center;
+        color: grey;
+        padding-top: 5px;
+        font-size: 0.9em;
+        padding-bottom: 25px;
+      }
+
+      .profile-card-content-counts {
+        padding-top: 20px;
+        height: 50px;
+        border-top: 1px solid rgb(236, 236, 236);
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+      }
+
+      .profile-card-content-counts div {
+        font-weight: 700;
+        font-size: 1.1em;
+      }
+
+      .profile-card-content-counts div span {
+        font-weight: 400;
+        color: grey;
+        font-size: 0.7em;
+        letter-spacing: 2px;
+      }
+
+      .bg {
+        background: url("./images/bg-pattern-top.svg") -25% 250% no-repeat,
+          url("./images/bg-pattern-bottom.svg") 125% -150% no-repeat;
+        background-size: 700px 700px, 700px 700px;
+        background-color: #19a1ad;
+        width: 90%;
+        margin: 0 auto;
+        height: 70vh;
+        position: relative;
+        margin-top: 15vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="profile-card">
+        <div class="profile-card-bg"></div>
+        <img class="profile-card-img" src="./images/image-victor.jpg" />
+        <div class="profile-card-content">
+          <div class="profile-card-content-name">
+            Victor Crest <span>&nbsp;26</span>
+          </div>
+          <div class="profile-card-content-location">London</div>
+        </div>
+        <div class="profile-card-content-counts">
+          <div>80K<br /><span>Followers</span></div>
+          <div>803K<br /><span>Likes</span></div>
+          <div>1.4K<br /><span>Photos</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/maxmonciardini">Max Monciardini</a>.
+    </div>
+  </body>
 </html>
